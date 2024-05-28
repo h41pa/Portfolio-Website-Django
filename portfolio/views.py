@@ -53,4 +53,14 @@ def blog(request):
 def blog_detail(request, pk):
     blog = Blog.objects.get(pk=pk)
     context = {'blog': blog}
-    return render(request, 'blog-detailcl.html', context)
+    return render(request, 'blog-detail.html', context)
+
+
+
+def register(request):
+
+    if request.method == 'POST':
+        pass
+
+    else:
+        messages
