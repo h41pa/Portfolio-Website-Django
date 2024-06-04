@@ -38,8 +38,8 @@ def portfolio(request):
     return render(request, 'portfolio.html', context)
 
 
-def portfolio_detail(request, pk):
-    portfolio = Portfolio.objects.get(pk=pk)
+def portfolio_detail(request, slug):
+    portfolio = Portfolio.objects.get(slug=slug)
     context = {'portfolio': portfolio}
     return render(request, 'portfolio-detail.html', context)
 
@@ -50,17 +50,9 @@ def blog(request):
     return render(request, 'blog.html', context)
 
 
-def blog_detail(request, pk):
-    blog = Blog.objects.get(pk=pk)
+def blog_detail(request, slug):
+    blog = Blog.objects.get(slug=slug)
     context = {'blog': blog}
     return render(request, 'blog-detail.html', context)
 
 
-
-def register(request):
-
-    if request.method == 'POST':
-        pass
-
-    else:
-        messages
