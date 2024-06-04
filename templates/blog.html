@@ -6,7 +6,7 @@
 Start SEO blocks
 ================================= -->
 {% block title %}h41pa' blogs{% endblock %}
-{% block decription %}{% endblock %}
+{% block description %}{% endblock %}
 {% block keywords %}{% endblock %}
 <!-- ================================
 END SEO blocks
@@ -34,7 +34,41 @@ Start Content
 
 {% block content %}
 
+<section>
+  <div class="innerPageBannerCol">
+    <div class="container">
+      <div class="row g-4 g-md-3  align-items-center">
+        <div class="col-md-6">
+          <div class="bannerContent">
+            <h1 class="xlTitle pb-md-3">See my recent blogs below</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section>
+  <div class="lightBg">
+    <div class="container">
+      <div class="portfolioContentMain">
+        <div class="row g-3 g-md-4 g-lg-5 portfolioRow">
+          {% for blog in blogs %}
+          <div class="col-md-6 pColMain">
+            <div class="pCol">
+               <h3 class="authorCol" align="center"> {{blog.name}}</h3>
+              <a href="{% url 'portfolio:blog' slug=blog.slug %}" >
+              <img src="{{blog.image.url}}" alt="..." class="pImg">
+              </a>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 {%endblock%}
 
