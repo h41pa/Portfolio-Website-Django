@@ -40,7 +40,7 @@ Start Content
       <div class="row g-4 g-md-3  align-items-center">
         <div class="col-md-6">
           <div class="bannerContent">
-            <h1 class="xlTitle pb-md-3">See my recent blogs below</h1>
+            <h1 class="xlTitle pb-md-3">See my recent blog posts below</h1>
           </div>
         </div>
       </div>
@@ -53,10 +53,10 @@ Start Content
     <div class="container">
       <div class="portfolioContentMain">
         <div class="row g-3 g-md-4 g-lg-5 portfolioRow">
-          {% for blog in blogs %}
+          {% for blog in blogs.reverse %}
           <div class="col-md-6 pColMain">
             <div class="pCol">
-               <h3 class="authorCol" align="center"> {{blog.name}}</h3>
+               <h3 class="authorCol" align="center"> {{blog.name}}<br> {{blog.timestamp}}</h3>
               <a href="{% url 'portfolio:blog' slug=blog.slug %}" >
               <img src="{{blog.image.url}}" alt="..." class="pImg">
               </a>
