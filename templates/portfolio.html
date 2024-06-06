@@ -33,6 +33,9 @@ Start Content
 ================================= -->
 {% block content %}
 
+{% for port in portfolios %}
+<a href="{% url 'portfolio:portfolio' slug=port.slug%}"><img src="{{port.image.url}}"></a>
+{% endfor %}
 
 {% endblock %}
 <!-- ================================
