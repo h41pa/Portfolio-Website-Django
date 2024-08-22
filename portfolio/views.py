@@ -24,7 +24,7 @@ def contact(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Thank you. We will be in touch soon.")
-            return redirect('/')
+            return redirect('/') # returning to main page
 
     else:
         form = ContactForm()
