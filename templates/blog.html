@@ -57,7 +57,7 @@ Start Content
           <div class="col-md-6 pColMain">
             <div class="pCol">
                <h3 class="authorCol" align="center"> {{blog.name}}<br> {{blog.timestamp}}</h3>
-              <a href="{% url 'portfolio:blog' slug=blog.slug %}" >
+              <a href="{% url 'app:blog' slug=blog.slug %}" >
               <img src="{{blog.image.url}}" alt="..." class="pImg">
               </a>
             </div>

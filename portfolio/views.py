@@ -23,12 +23,11 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, "Thank you. We will be in touch soon.")
-            return redirect('/') # returning to main page
-
+            messages.success(request, 'yout msj was sent')
+            return redirect('/')
     else:
         form = ContactForm()
-    return render(request, 'contact.html', {'form': form})
+    return render(request, 'html', form)
 
 
 def portfolio(request):
