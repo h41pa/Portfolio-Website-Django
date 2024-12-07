@@ -27,7 +27,7 @@ def contact(request):
             return redirect('/')
     else:
         form = ContactForm()
-    return render(request, 'html', form)
+    return render(request, 'contact.html', form)
 
 
 def portfolio(request):
